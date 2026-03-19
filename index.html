@@ -4,263 +4,252 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI-Powered Auto-CRM: Sıfır Manuel Giriş ile Satış Pipeline Yönetimi</title>
-    <meta name="description" content="Satış profesyonelleri için AI destekli CRM otomasyonu. Toplantılar, e-postalar ve aramalar sonrası CRM'inizi otomatik güncelleyin.">
+    <meta name="description" content="Satış profesyonelleri için AI destekli CRM otomasyonu. Toplantı ve e-posta sonrası CRM'inizi otomatik güncelleyin, manuel girişe veda edin.">
     <meta property="og:title" content="AI-Powered Auto-CRM: Sıfır Manuel Giriş ile Satış Pipeline Yönetimi">
-    <meta property="og:description" content="Satış profesyonelleri için AI destekli CRM otomasyonu. Toplantılar, e-postalar ve aramalar sonrası CRM'inizi otomatik güncelleyin.">
+    <meta property="og:description" content="Satış profesyonelleri için AI destekli CRM otomasyonu. Toplantı ve e-posta sonrası CRM'inizi otomatik güncelleyin, manuel girişe veda edin.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="YOUR_WEBSITE_URL_HERE">
-    <meta property="og:image" content="YOUR_SOCIAL_SHARE_IMAGE_URL_HERE">
-
-    <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <meta property="og:url" content="https://ai-autocrm.com">
+    <meta property="og:image" content="https://ai-autocrm.com/og-image.jpg">
+    <link rel="canonical" href="https://ai-autocrm.com">
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-bg': '#0a0a0a', // Custom deep gray for background (similar to gray-950)
+                        'secondary-bg': '#1a1a1a', // Slightly lighter for cards/sections
+                        'accent-500': '#6366f1', // Indigo-500
+                        'accent-600': '#4f46e5', // Indigo-600 for hover
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts CDN - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+            background-color: #0a0a0a; /* Ensure base matches primary-bg */
+            color: #ffffff;
         }
-        /* Custom scroll-behavior for smooth scroll, since Tailwind's class is often overwritten */
+        /* Smooth scroll for anchor links */
         html {
             scroll-behavior: smooth;
         }
-        .animate-bounce-custom {
-            animation: bounce 1s infinite;
-        }
-        @keyframes bounce {
-            0%, 100% {
-                transform: translateY(-25%);
-                animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
-            }
-            50% {
-                transform: translateY(0);
-                animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
-            }
-        }
     </style>
 </head>
-<body class="bg-gray-950 text-white">
-
-    <!-- Google Analytics (Placeholder) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA_MEASUREMENT_ID"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'YOUR_GA_MEASUREMENT_ID');
-    </script>
+<body class="bg-primary-bg text-white antialiased">
 
     <!-- 1. NAV -->
-    <nav class="sticky top-0 z-50 bg-gray-950/90 backdrop-blur-sm shadow-lg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-indigo-500 tracking-tight">AI-Powered Auto-CRM</a>
-            <a href="#hero" class="bg-indigo-600 hover:bg-indigo-700 text-white font-medium py-2 px-5 rounded-lg transition duration-300 ease-in-out shadow-md">
+    <nav class="sticky top-0 z-50 bg-primary-bg/90 backdrop-blur-sm shadow-lg py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white tracking-tight">AI Auto-CRM</a>
+            <a href="#hero-form" class="bg-accent-500 hover:bg-accent-600 text-white font-medium py-2 px-6 rounded-lg transition-colors duration-300">
                 Erken Erişim Al
             </a>
         </div>
     </nav>
 
-    <main>
-        <!-- 2. HERO -->
-        <section id="hero" class="relative overflow-hidden pt-20 pb-28 sm:py-32 lg:pb-36 xl:pb-40 bg-gray-950">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-                <h1 class="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight leading-tight mb-6 animate-fade-in-up">
-                    Stop Updating Your CRM. <br class="hidden sm:inline-block"> Let AI Do It After Every Call.
+    <!-- 2. HERO -->
+    <header id="hero-form" class="py-20 md:py-32 bg-primary-bg text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-accent-500/10 via-transparent to-accent-500/10 opacity-10"></div>
+        <div class="container mx-auto px-4 max-w-4xl relative z-10">
+            <div id="hero-content">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 tracking-tight">
+                    Stop Updating Your CRM. <br class="hidden md:block"> Let AI Do It After Every Call.
                 </h1>
-                <p class="text-xl sm:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto animate-fade-in-up delay-200">
-                    Sıfır manuel girişle satış pipeline'ınızı otomatik yönetin. Satışa odaklanın, veri girişine değil.
+                <p class="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl mx-auto">
+                    Sıfır manuel giriş ile satış pipeline'ınızı otomatik yönetin ve asıl satışa odaklanın.
                 </p>
-                <div id="hero-form-container" class="max-w-xl mx-auto">
-                    <form id="waitlist-form" class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                        <input type="email" id="email-input" placeholder="E-posta adresinizi girin..." required aria-label="E-posta adresinizi girin"
-                               class="flex-grow w-full sm:w-auto p-4 rounded-lg bg-gray-800 border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-300 ease-in-out">
-                        <button type="submit"
-                                class="w-full sm:w-auto bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-4 px-8 rounded-lg transition duration-300 ease-in-out shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-950">
-                            Erken Erişim Al
-                        </button>
-                    </form>
-                    <p class="mt-4 text-sm text-gray-400">Ücretsiz başla, kredi kartı gerekmez.</p>
+
+                <form id="waitlist-form" class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-4">
+                    <input type="email" id="email-input" placeholder="E-posta adresinizi girin" required
+                           class="w-full sm:w-80 p-3 rounded-lg bg-secondary-bg border border-gray-700 focus:outline-none focus:ring-2 focus:ring-accent-500 text-white placeholder-gray-400">
+                    <button type="submit"
+                            class="w-full sm:w-auto bg-accent-500 hover:bg-accent-600 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300 text-lg">
+                        Erken Erişim Al
+                    </button>
+                </form>
+                <p class="text-gray-400 text-sm">Ücretsiz başla, kredi kartı gerekmez.</p>
+            </div>
+            <div id="thank-you-message" class="hidden text-xl md:text-2xl font-semibold text-accent-500 mt-10">
+                🎉 Harikasın! Erken erişim listemize eklendin. Hazır olduğunda ilk sen haberdar olacaksın.
+            </div>
+        </div>
+    </header>
+
+    <!-- 3. PROBLEM -->
+    <section class="py-16 md:py-24 bg-secondary-bg">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 tracking-tight">Tanıdık geliyor mu?</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="p-6 bg-primary-bg rounded-lg shadow-xl border border-gray-800">
+                    <p class="text-5xl mb-4">✍️</p>
+                    <h3 class="text-xl font-semibold mb-3">Manuel Veri Girişi Yükü</h3>
+                    <p class="text-gray-300">Satış profesyonelleri her gün 1-2 saatlerini CRM'e manuel veri girişi yaparak harcıyor. Bu rutin, operasyonel bir kabusa dönüşüyor.</p>
                 </div>
-                <div id="thank-you-message" class="hidden mt-10 p-6 bg-green-700/30 border border-green-600 rounded-lg max-w-xl mx-auto text-center">
-                    <p class="text-2xl font-semibold text-green-300">🎉 Harikasın!</p>
-                    <p class="mt-3 text-lg text-green-200">Erken erişim listemize eklendin. Hazır olduğunda ilk sen haberdar olacaksın.</p>
+                <div class="p-6 bg-primary-bg rounded-lg shadow-xl border border-gray-800">
+                    <p class="text-5xl mb-4">⏰</p>
+                    <h3 class="text-xl font-semibold mb-3">Asıl Satış Aktivitelerinden Çalınan Zaman</h3>
+                    <p class="text-gray-300">Toplantı notları, e-posta özetleri ve deal stage güncellemeleri, satış görüşmeleri yapmanız gereken değerli vaktinizden çalıyor.</p>
+                </div>
+                <div class="p-6 bg-primary-bg rounded-lg shadow-xl border border-gray-800">
+                    <p class="text-5xl mb-4">📉</p>
+                    <h3 class="text-xl font-semibold mb-3">Veri Tutarlılığı Sorunu</h3>
+                    <p class="text-gray-300">Eksik veya hatalı girişler nedeniyle CRM verileriniz güvenilirliğini yitiriyor. Bu da doğru raporlama ve tahmin yapmayı engelliyor.</p>
                 </div>
             </div>
-            <!-- Background gradient -->
-            <div class="absolute inset-0 bg-gradient-to-br from-gray-900 to-gray-950 opacity-70"></div>
-            <!-- Animated Blob / Sphere -->
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-violet-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-bounce-custom"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-indigo-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-bounce-custom animation-delay-200"></div>
-        </section>
+        </div>
+    </section>
 
-        <!-- 3. PROBLEM -->
-        <section id="problem" class="py-20 sm:py-28 bg-gray-900">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-3xl sm:text-4xl font-bold mb-12">Tanıdık geliyor mu?</h2>
-                <div class="grid md:grid-cols-3 gap-8 text-left">
-                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 ease-in-out">
-                        <p class="text-5xl mb-4">⏳</p>
-                        <h3 class="text-xl font-semibold mb-3">Manuel Veri Girişi Yükü</h3>
-                        <p class="text-gray-300">Satış profesyonelleri her gün 1-2 saatlerini CRM'e manuel veri girişi yaparak harcıyor. Email özetleme, toplantı notları aktarma, follow-up oluşturma... Hepsi zaman kaybı.</p>
-                    </div>
-                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 ease-in-out">
-                        <p class="text-5xl mb-4">📉</p>
-                        <h3 class="text-xl font-semibold mb-3">Veri Tutarlılığı ve Takip Sorunları</h3>
-                        <p class="text-gray-300">Operasyonel yük, asıl satış aktivitelerinden çalıyor ve veri tutarlılığını tehlikeye atıyor. Önemli detaylar unutuluyor, deal stage'ler güncel kalmıyor.</p>
-                    </div>
-                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-indigo-500 transition-all duration-300 ease-in-out">
-                        <p class="text-5xl mb-4">🛠️</p>
-                        <h3 class="text-xl font-semibold mb-3">Mevcut CRM'ler Yetmez</h3>
-                        <p class="text-gray-300">Mevcut CRM'ler harika birer 'veri deposu' ama otomasyonları zayıf. Satış ekibinizin verimliliğini artırmak için daha akıllı çözümlere ihtiyacınız var.</p>
-                    </div>
+    <!-- 4. ÇÖZÜM -->
+    <section class="py-16 md:py-24 bg-primary-bg">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 tracking-tight">İşte çözüm</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="p-6 bg-secondary-bg rounded-lg shadow-xl border border-gray-800">
+                    <div class="text-accent-500 text-5xl mb-4 mx-auto w-16 h-16 flex items-center justify-center rounded-full bg-primary-bg/50">🤖</div>
+                    <h3 class="text-xl font-semibold mb-3">Otomatik İletişim Analizi</h3>
+                    <p class="text-gray-300">E-posta, takvim ve video görüşmelerinizi (Zoom, Google Meet) AI kullanarak otomatik olarak dinler ve anahtar bilgileri çıkarır.</p>
+                </div>
+                <div class="p-6 bg-secondary-bg rounded-lg shadow-xl border border-gray-800">
+                    <div class="text-accent-500 text-5xl mb-4 mx-auto w-16 h-16 flex items-center justify-center rounded-full bg-primary-bg/50">🧠</div>
+                    <h3 class="text-xl font-semibold mb-3">Akıllı CRM Güncelleme</h3>
+                    <p class="text-gray-300">GPT-4 ile analiz edilen içeriklerden contact bilgileri, deal stage önerileri, follow-up taskları ve toplantı özetleri otomatik olarak oluşturulur.</p>
+                </div>
+                <div class="p-6 bg-secondary-bg rounded-lg shadow-xl border border-gray-800">
+                    <div class="text-accent-500 text-5xl mb-4 mx-auto w-16 h-16 flex items-center justify-center rounded-full bg-primary-bg/50">🔗</div>
+                    <h3 class="text-xl font-semibold mb-3">Esnek Entegrasyon</h3>
+                    <p class="text-gray-300">Kendi hafif CRM'imiz veya mevcut HubSpot/Pipedrive gibi sistemlerinizle sorunsuz ve güvenli bir şekilde entegre olur.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- 4. ÇÖZÜM -->
-        <section id="solution" class="py-20 sm:py-28 bg-gray-950">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-3xl sm:text-4xl font-bold mb-12">İşte çözüm</h2>
-                <div class="grid md:grid-cols-3 gap-8 text-left">
-                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-violet-500 transition-all duration-300 ease-in-out">
-                        <div class="text-violet-500 text-4xl mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3">Otomatik İletişim Analizi</h3>
-                        <p class="text-gray-300">Email, Calendar ve video call platformlarınızla entegre olur. GPT-4 kullanarak tüm satış iletişiminizi otomatik dinler ve analiz eder.</p>
+    <!-- 5. NASIL ÇALIŞIR -->
+    <section class="py-16 md:py-24 bg-secondary-bg">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-16 tracking-tight">Nasıl Çalışır?</h2>
+            <div class="grid md:grid-cols-3 gap-12">
+                <div class="text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start mb-4">
+                        <span class="text-5xl font-extrabold text-accent-500 mr-4">1.</span>
+                        <h3 class="text-2xl font-semibold">İletişim Kurun</h3>
                     </div>
-                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-violet-500 transition-all duration-300 ease-in-out">
-                        <div class="text-violet-500 text-4xl mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3">Akıllı CRM Güncellemeleri</h3>
-                        <p class="text-gray-300">Contact bilgilerini otomatik çıkarır, deal stage önerir, follow-up task'ları oluşturur ve toplantı özetleri/next-step'leri kaydeder.</p>
+                    <p class="text-gray-300 max-w-md mx-auto md:mx-0">Uygulamamız, Google Meet, Zoom veya e-posta iletişimlerinizi izin verdiğiniz ölçüde dinler ve analiz için hazırlar.</p>
+                </div>
+                <div class="text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start mb-4">
+                        <span class="text-5xl font-extrabold text-accent-500 mr-4">2.</span>
+                        <h3 class="text-2xl font-semibold">AI Analizi Devreye Girer</h3>
                     </div>
-                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-violet-500 transition-all duration-300 ease-in-out">
-                        <div class="text-violet-500 text-4xl mb-4">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-semibold mb-3">Mevcut CRM'lerle Entegrasyon</h3>
-                        <p class="text-gray-300">Kendi hafif CRM'imizle başlayabilir veya HubSpot/Pipedrive gibi favori CRM'lerinizle sorunsuz entegre olabilirsiniz.</p>
+                    <p class="text-gray-300 max-w-md mx-auto md:mx-0">GPT-4 destekli yapay zekamız, içeriği anlar, müşteri bilgilerini, önemli noktaları ve aksiyon maddelerini çıkarır.</p>
+                </div>
+                <div class="text-center md:text-left">
+                    <div class="flex items-center justify-center md:justify-start mb-4">
+                        <span class="text-5xl font-extrabold text-accent-500 mr-4">3.</span>
+                        <h3 class="text-2xl font-semibold">CRM Otomatik Güncellenir</h3>
                     </div>
+                    <p class="text-gray-300 max-w-md mx-auto md:mx-0">Çıkarılan tüm bilgiler otomatik olarak CRM'inize (kendi veya entegre) kaydedilir. "Toplantı bitti, CRM güncellendi!"</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- 5. NASIL ÇALIŞIR -->
-        <section id="how-it-works" class="py-20 sm:py-28 bg-gray-900">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-3xl sm:text-4xl font-bold mb-12">Nasıl Çalışır?</h2>
-                <div class="grid md:grid-cols-3 gap-8 text-left">
-                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700">
-                        <div class="text-indigo-500 text-5xl font-extrabold mb-4">1</div>
-                        <h3 class="text-xl font-semibold mb-3">Bağla ve Unut</h3>
-                        <p class="text-gray-300">E-posta, takvim ve video toplantı platformlarınızı (Google Meet, Zoom vb.) saniyeler içinde Auto-CRM'e bağlayın. Kurulum kolaylığı ile anında başlayın.</p>
-                    </div>
-                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700">
-                        <div class="text-indigo-500 text-5xl font-extrabold mb-4">2</div>
-                        <h3 class="text-xl font-semibold mb-3">AI Dinler ve Analiz Eder</h3>
-                        <p class="text-gray-300">Siz satış görüşmelerinize odaklanırken, yapay zekamız (GPT-4 destekli) tüm iletişiminizi (toplantı transkriptleri, e-posta zincirleri) dinler ve analiz eder.</p>
-                    </div>
-                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700">
-                        <div class="text-indigo-500 text-5xl font-extrabold mb-4">3</div>
-                        <h3 class="text-xl font-semibold mb-3">CRM Otomatik Güncellenir</h3>
-                        <p class="text-gray-300">Toplantı bitti, e-posta gönderildi! AI, contact bilgilerini, deal stage'leri, toplantı notlarını, özetleri ve takip görevlerini otomatik olarak CRM'inize kaydeder.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <!-- 6. FİYAT -->
+    <section class="py-16 md:py-24 bg-primary-bg">
+        <div class="container mx-auto px-4 max-w-3xl">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 tracking-tight">Fiyatlandırma</h2>
+            <div class="flex justify-center">
+                <div class="bg-secondary-bg p-8 md:p-10 rounded-xl shadow-2xl border border-gray-800 w-full max-w-md text-center">
+                    <h3 class="text-3xl font-bold mb-4 text-accent-500">Pro Plan</h3>
+                    <p class="text-5xl md:text-6xl font-extrabold mb-2">
+                        $49<span class="text-xl md:text-2xl text-gray-400">/kullanıcı/ay</span>
+                    </p>
+                    <p class="text-gray-400 mb-8">veya 3-10 kullanıcı için $99/ay flat fee</p>
 
-        <!-- 6. FİYAT -->
-        <section id="pricing" class="py-20 sm:py-28 bg-gray-950">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-3xl sm:text-4xl font-bold mb-12">Fiyatlandırma</h2>
-                <div class="max-w-md mx-auto bg-gray-800 p-8 rounded-xl shadow-lg border border-gray-700">
-                    <h3 class="text-2xl font-bold mb-4">Pro Plan</h3>
-                    <p class="text-5xl font-extrabold text-indigo-500 mb-2">$29<span class="text-3xl font-medium text-gray-300">/kullanıcı/ay</span></p>
-                    <p class="text-sm text-gray-400 mb-6">(3-10 kullanıcı için $99/ay flat fee seçeneği)</p>
-                    <ul class="text-left space-y-3 text-gray-300 mb-8">
+                    <ul class="text-left text-lg space-y-3 mb-10">
                         <li class="flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>
-                            Sınırsız Toplantı Otomasyonu
+                            <svg class="w-6 h-6 mr-3 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Sınırsız Toplantı & E-posta Otomasyonu
                         </li>
                         <li class="flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>
-                            Email ve Takvim Entegrasyonu
+                            <svg class="w-6 h-6 mr-3 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Gelişmiş AI Analizi & Öneriler
                         </li>
                         <li class="flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>
-                            Akıllı Takip Görevleri Oluşturma
+                            <svg class="w-6 h-6 mr-3 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            HubSpot & Pipedrive Entegrasyonu
                         </li>
                         <li class="flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>
-                            HubSpot / Pipedrive Entegrasyonu
+                            <svg class="w-6 h-6 mr-3 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Özel Raporlama ve Analitik
                         </li>
                         <li class="flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green-500 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
-                            </svg>
-                            Premium Müşteri Desteği
+                            <svg class="w-6 h-6 mr-3 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Öncelikli Destek
                         </li>
                     </ul>
-                    <a href="#hero" class="w-full inline-block bg-violet-600 hover:bg-violet-700 text-white font-bold py-4 px-8 rounded-lg transition duration-300 ease-in-out shadow-lg hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-violet-500 focus:ring-offset-2 focus:ring-offset-gray-950">
+                    <a href="#hero-form" class="bg-accent-500 hover:bg-accent-600 text-white font-semibold py-3 px-10 rounded-lg transition-colors duration-300 text-xl w-full inline-block">
                         Şimdi Başla
                     </a>
+                    <p class="text-gray-400 text-sm mt-4">Ayda 20 toplantı için ücretsiz sürümümüz mevcut!</p>
                 </div>
             </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <!-- 7. FOOTER -->
-    <footer class="bg-gray-950 py-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500">
-            <p>&copy; 2023 AI-Powered Auto-CRM. Tüm hakları saklıdır.</p>
+    <footer class="bg-primary-bg py-8 border-t border-gray-800">
+        <div class="container mx-auto px-4 text-center text-gray-500">
+            <p>&copy; <span id="current-year"></span> AI Auto-CRM. Tüm hakları saklıdır.</p>
         </div>
     </footer>
 
     <script>
-        document.getElementById('waitlist-form').addEventListener('submit', function(e) {
+        // Set current year in footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Form Submission Logic
+        const waitlistForm = document.getElementById('waitlist-form');
+        const emailInput = document.getElementById('email-input');
+        const heroContent = document.getElementById('hero-content');
+        const thankYouMessage = document.getElementById('thank-you-message');
+
+        waitlistForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            const emailInput = document.getElementById('email-input');
             const email = emailInput.value;
 
             if (email) {
+                // Save to localStorage
                 localStorage.setItem('waitlist_email', email);
 
-                // Hide the form and show the thank you message
-                document.getElementById('hero-form-container').classList.add('hidden');
-                document.getElementById('thank-you-message').classList.remove('hidden');
-
-                // Clear the input field
-                emailInput.value = '';
-
-                // Optional: Send Google Analytics event
+                // Simulate Google Analytics event (replace with actual gtag if GA is installed)
                 if (typeof gtag === 'function') {
                     gtag('event', 'waitlist_signup', {
                         'event_category': 'Engagement',
-                        'event_label': 'Early Access Signup',
+                        'event_label': 'Waitlist Signup',
                         'value': email
                     });
+                } else {
+                    console.log('Google Analytics event: waitlist_signup (email: ' + email + ')');
                 }
-                console.log('Waitlist email saved:', email); // For debugging
+
+                // Hide hero content and show thank you message
+                heroContent.classList.add('hidden');
+                thankYouMessage.classList.remove('hidden');
+
+                // Optionally, clear the input field
+                emailInput.value = '';
             }
         });
     </script>
